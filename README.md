@@ -7,16 +7,18 @@
   </p>
 
   <p align="center">
-    <a href="#-live-demo--recruiter-quick-access"><strong>Live Demo Access</strong></a> •
+    <a href="https://e-commerce-web-application-taupe.vercel.app/"><strong>🌐 Live Web App (Vercel)</strong></a> •
+    <a href="https://e-commerce-web-application-34r4.onrender.com/"><strong>⚙️ Live REST API (Render)</strong></a> •
     <a href="#-key-features"><strong>Features</strong></a> •
     <a href="#-system-architecture"><strong>Architecture</strong></a> •
     <a href="#-rest-api-documentation"><strong>API Specs</strong></a> •
-    <a href="#-getting-started"><strong>Quick Start</strong></a> •
-    <a href="#-deployment-guide"><strong>Deployment</strong></a>
+    <a href="#-getting-started"><strong>Quick Start</strong></a>
   </p>
 
   <!-- Shields.io Badges -->
   <p align="center">
+    <a href="https://e-commerce-web-application-taupe.vercel.app/"><img src="https://img.shields.io/badge/Vercel_Frontend-Live_App-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Live App" /></a>
+    <a href="https://e-commerce-web-application-34r4.onrender.com/"><img src="https://img.shields.io/badge/Render_Backend-Live_API-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render Live API" /></a>
     <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
     <img src="https://img.shields.io/badge/Vite-5.2-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
@@ -24,8 +26,6 @@
     <img src="https://img.shields.io/badge/Express.js-4.19-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
     <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
     <img src="https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white" alt="JWT" />
-    <img src="https://img.shields.io/badge/Vercel-Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-    <img src="https://img.shields.io/badge/Render-Hosted-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render" />
   </p>
 
 </div>
@@ -42,8 +42,15 @@
 
 ---
 
-## 🔑 Recruiter Quick Access & Demo Credentials
+## 🚀 Live Production Links & Recruiter Quick Access
 
+### 🌐 Live Deployment Links
+| Service | Environment | Live Target URL | Status |
+| :--- | :--- | :--- | :--- |
+| **Frontend Web App** | Vercel (Production) | [https://e-commerce-web-application-taupe.vercel.app/](https://e-commerce-web-application-taupe.vercel.app/) | ![Vercel](https://img.shields.io/badge/Live-Active-brightgreen) |
+| **Backend REST API** | Render (Production) | [https://e-commerce-web-application-34r4.onrender.com/](https://e-commerce-web-application-34r4.onrender.com/) | ![Render](https://img.shields.io/badge/Live-Active-brightgreen) |
+
+### 🔑 Demo Credentials
 To evaluate full functionality instantly without manual registration, click the **"Demo Login"** button on the application header or use:
 
 | Role | Email | Password | Access Rights |
@@ -256,6 +263,9 @@ Open your browser and navigate to **`http://localhost:5173`**.
 
 ## 🌐 Production Deployment Guide
 
+* **Live Frontend Web App**: [https://e-commerce-web-application-taupe.vercel.app/](https://e-commerce-web-application-taupe.vercel.app/)
+* **Live Backend REST API**: [https://e-commerce-web-application-34r4.onrender.com/](https://e-commerce-web-application-34r4.onrender.com/)
+
 ### Deploying Backend to Render
 1. Sign in to [Render.com](https://render.com) and create a **Web Service**.
 2. Connect your GitHub repository and set the **Root Directory** to `backend`.
@@ -266,13 +276,13 @@ Open your browser and navigate to **`http://localhost:5173`**.
    - `NODE_ENV`: `production`
    - `JWT_SECRET`: *(Your random secret key)*
    - `MONGODB_URI`: *(Your MongoDB Atlas URI)*
-   - `CLIENT_URL`: `https://your-app-name.vercel.app`
+   - `CLIENT_URL`: `https://e-commerce-web-application-taupe.vercel.app`
 
 ### Deploying Frontend to Vercel
 1. Sign in to [Vercel.com](https://vercel.com) and create a **New Project**.
 2. Select your repository and set the **Root Directory** to `frontend`.
 3. Set Environment Variable:
-   - `VITE_API_BASE_URL`: `https://your-render-backend-url.onrender.com/api`
+   - `VITE_API_BASE_URL`: `https://e-commerce-web-application-34r4.onrender.com/api`
 4. Click **Deploy**. Vercel will build the SPA and apply SPA routing rewrites from `vercel.json`.
 
 ---
