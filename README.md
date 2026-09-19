@@ -67,15 +67,16 @@ Basic student CRUD applications often lack real-world full-stack polish: they st
 
 ## ✨ Key Features Breakdown
 
-### 🔒 1. Authentication & Security
+### 🔒 1. Authentication & Security & Role Protection
 - **JWT Session Tokens**: State stored securely in `localStorage` and sent via `Authorization: Bearer <token>` headers.
 - **bcrypt Password Hashing**: Passwords salted and hashed with 10 rounds of bcrypt encryption.
 - **Protected Routes**: React Router guards restricting access to `/checkout`, `/order-success`, `/orders`, `/wishlist`, and `/admin`.
-- **Form Validation**: Strict client-side and server-side validation with responsive toast feedback.
+- **Role-Based Access Control (RBAC)**: `/admin` dashboard and product creation/deletion API endpoints are strictly guarded for Admin accounts (`user.role === 'admin'`). Standard users receive an **Access Denied** guard view.
 
 ### 🛍️ 2. Product Catalogue & Real-Time Filtering
-- **Multi-Category Filter**: Instant filtering across Audio, Wearables, Fashion, Electronics, and Home categories.
-- **Price Range Slider**: Dynamic price boundary filter ($10 – $500+).
+- **Real-World Company Brands**: Filter products by top global companies (*Sony*, *Apple*, *Samsung*, *Nike*, *Bose*, *Dyson*, *Logitech*, *Ray-Ban*, *Razer*, *JBL*, *Fossil*, *Puma*, *Anker*, *Philips*, *Marshall*, *GoPro*, *Theragun*, *Seiko*, *Nespresso*).
+- **8 Real-World Categories**: Instant filtering across *Audio*, *Wearables*, *Electronics*, *Fashion*, *Footwear*, *Home & Kitchen*, *Gaming*, and *Personal Care*.
+- **INR Price Range Slider**: Dynamic price boundary filter (`₹1,000` to `₹1,50,000+`).
 - **Multi-Criteria Sorting**: Sort catalogue by Price (Low to High / High to Low), Rating, and Newest Arrivals.
 - **Instant Search Bar**: Debounced title, brand, and description text search.
 
@@ -85,16 +86,16 @@ Basic student CRUD applications often lack real-world full-stack polish: they st
 - **Dynamic Rating Recalculation**: Automatic recalculation of average rating scores and total review counts.
 
 ### 🛒 4. Shopping Cart & Discount Coupon Engine
-- **Stateful Shopping Cart**: Increment, decrement, or remove items with automatic recalculation of subtotal, tax (8%), and free shipping progress.
+- **Stateful Shopping Cart**: Increment, decrement, or remove items with automatic recalculation of subtotal in Indian Rupees (`₹`), tax (8%), and free shipping progress (`₹1,000` threshold).
 - **Promo Coupon System**:
   - `WELCOME10` ➔ 10% Discount off subtotal
-  - `AURA20` ➔ $20 Flat Discount off order total
+  - `AURA500` ➔ `₹500` Flat Discount off order total
   - `FREESHIP` ➔ 100% Free Shipping waiver
 
 ### 🚚 5. Checkout & Live Delivery Tracker
-- **Order Placement**: Multi-step checkout form collecting shipping address and payment preferences (Card/COD).
+- **Order Placement**: Multi-step checkout form collecting Indian shipping address sample (`Bandra West, Mumbai`, `Pincode: 400050`) and payment preferences (Card/UPI/COD).
 - **Interactive Delivery Stepper**: 5-stage progress timeline tracking (`Confirmed` ➔ `Processing` ➔ `Shipped` ➔ `Out for Delivery` ➔ `Delivered`).
-- **Order History**: Persistent list of past purchases with invoice details.
+- **Order History**: Persistent list of past purchases with invoice details in `₹`.
 
 ### 📊 6. Admin Store Dashboard (`/admin`) — *Admin Only*
 - **Role-Based Protection**: Restricted strictly to Admin accounts (`user.role === 'admin'`). Regular users attempting to access `/admin` receive an **Access Denied** guard screen.
@@ -214,8 +215,8 @@ Clone the repository and install all dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/mini-ecommerce-platform.git
-cd mini-ecommerce-platform
+git clone https://github.com/lokeshpadarthi07-collab/E-Commerce-Web-Application.git
+cd "E-Commerce Web Application"
 
 # Install root, backend, and frontend dependencies in one command
 npm run install:all
